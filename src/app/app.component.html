@@ -1,0 +1,73 @@
+
+<div class="container">
+  <h1 class="display-1">Date picker</h1>
+  <p class="lead">Pick your date like a pro</p>
+  <h3>Contacts</h3>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>E-mail address</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let contact of contacts">
+        <td>{{contact | contactName}}</td>
+        <td>{{ contact.email }}</td>
+        <td>
+          <button class="btn btn-secondary me-2">Edit</button>
+          <button (click)="deleteContact(contact)" class="btn btn-danger">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+
+
+  <h3>Add contact</h3>
+  <form (ngSubmit)="addContact(addContactForm.value)" [formGroup]="addContactForm">
+  <ol>
+
+  <li>
+    <div class="mb-3">
+      <label for="inputFirstName">First name:</label>
+      <input
+        type="text"
+        formControlName="firstName"
+        required
+        class="form-control"
+      />
+    </div>
+
+  </li>
+  <div class="mb-3">
+    <label for="inputSurname">Surname:</label>
+    <input
+      type="text"
+      formControlName="surname"
+      required
+      id="inputSurname"
+      class="form-control"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="inputEmail">E-mail address:</label>
+    <input
+      type="email"
+      formControlName="email"
+      required
+      id="inputEmail"
+      class="form-control"
+    />
+  </div>
+</ol>
+  <div class="mb-3">
+    <button class="btn btn-primary"
+        [disabled]="!addContactForm.valid">Add</button>
+  </div>
+
+</form>
+</div>
