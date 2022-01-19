@@ -1,0 +1,24 @@
+<h1 class="display-1">Date picker</h1>
+  <p class="lead">Pick your date like a pro</p>
+  <h3>Contacts</h3>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>E-mail address</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let contact of contacts">
+        <!-- <td>{{contact | contactName}}</td>
+        <td>{{ contact.email }}</td>
+        <td>
+          <button class="btn btn-secondary me-2">Edit</button>
+          <button (click)="deleteContact(contact)" class="btn btn-danger">Delete</button>
+        </td> -->
+        <!-- <button class="btn btn-secondary me-2">Edit</button>
+          <button (click)="deleteContact(contact)" class="btn btn-danger">Delete</button> -->
+      </tr>
+    </tbody>
+  </table>

@@ -6,19 +6,25 @@ import { AppComponent } from './app.component';
 
 import { FormGroup, FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { ContactNamePipe } from './pipes/contact-name.pipe';
+import { ContactFormComponent } from './contact-form/contact-form.component';
+import { ContactListComponent } from './contact-list/contact-list.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ContactNamePipe
+    ContactNamePipe,
+    ContactFormComponent,
+    ContactListComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
